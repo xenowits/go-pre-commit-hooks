@@ -9,9 +9,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     stream = os.popen('go env GOVERSION')
     output = stream.read()
     x = re.search("go1.17.*", output)
-    if x:
-        return 1
-    return 0
+    if x: 
+        return 0
+    return 1
 
 
 if __name__ == '__main__':

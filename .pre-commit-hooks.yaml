@@ -1,0 +1,5 @@
+-   id: check-go-version
+    name: check for go version
+    description: prevents pushing commits if go version check fails
+    entry: hooks.version_check
+    language: python

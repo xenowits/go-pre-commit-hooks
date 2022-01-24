@@ -1,11 +1,11 @@
--   id: check-go-version
-    name: check for go version
-    description: prevents pushing commits if go version check fails
-    entry: check-go-version
-    language: python
--   id: check-licence-header
-    name: check if file has licence text appended as header
-    description: prevents pushing commits if licence header text absent
-    entry: check-licence-header
-    language: python
-    types: [file, go]
+- id: check-go-version
+  name: check for go version
+  description: prevents pushing commits if go version check fails
+  entry: check-go-version
+  language: python
+- id: check-licence-header
+  name: check if file has licence text appended as header
+  description: prevents pushing commits if licence header text absent
+  entry: check-licence-header
+  language: python
+  types: [file, go]

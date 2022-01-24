@@ -12,7 +12,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         type=str,
         help="expected go version, excluding `patch` version. Ex: 1.17",
     )
-    args = parser.parse_args(argv)
+    args = parser.parse_args()
 
     # get expected minimum go version
     reqVersion = args.version
@@ -20,7 +20,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         return 1
 
     print("required version", reqVersion)
-    
+
     # get go version
     stream = os.popen('go env GOVERSION')
     gotVersion = stream.read()

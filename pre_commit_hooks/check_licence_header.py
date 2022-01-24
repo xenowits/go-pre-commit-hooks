@@ -34,7 +34,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument('filenames', nargs='*', help='Filenames to fix')
     args = parser.parse_args(argv)
 
-    print(args.filenames)
     return_code = 0
     for filename in args.filenames:
         print(f'Filename {filename}', isLicenceHeaderPresent(filename))

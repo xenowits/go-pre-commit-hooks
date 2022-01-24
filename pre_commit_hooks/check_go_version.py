@@ -19,6 +19,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     if not reqVersion.startswith("go"):
         return 1
 
+    print("required version", reqVersion)
+    
     # get go version
     stream = os.popen('go env GOVERSION')
     gotVersion = stream.read()

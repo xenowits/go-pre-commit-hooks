@@ -7,16 +7,21 @@ from packaging.version import Version   # works for go module versions since go 
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
+    print("argv", argv)
+    
     parser.add_argument(
+        '-v',
         '--version',
         type=str,
+        action="store",
+        required=True,
         help="expected go version, excluding `patch` version. Ex: 1.17",
     )
-    args = parser.parse_args()
-
+    args = parser.parse_args(argv)
+   
     # get expected minimum go version
     reqVersion = args.version
-    if not reqVersion.startswith("go"):
+    if reqVersion is None or not reqVersion.startswith("go"):
         return 1
 
     print("required version", reqVersion)

@@ -36,7 +36,6 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     return_code = 0
     for filename in args.filenames:
-        print(f'Filename {filename}', isLicenceHeaderPresent(filename))
         if not isLicenceHeaderPresent(filename):
             prepend_licence_header(filename)
             print(f'Fixing {filename}')

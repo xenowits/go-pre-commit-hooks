@@ -4,7 +4,7 @@ import argparse
 from typing import Any, Sequence
 
 
-LICENCE_HEADER_TEXT = """// Copyright © 2022 Obol Technologies Inc.
+LICENCE_HEADER_TEXT = """// Copyright © 2022 Obol Labs Inc.
 //
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU General Public License as published by the Free
